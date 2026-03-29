@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00000000000000000000000000000000, type: 3}
+  m_Name: Fireball
+  m_EditorClassIdentifier:
+  id: 6
+  cardName: Fireball
+  description: Deals area damage to units and buildings.
+  cardType: 3
+  rarity: 1
+  elixirCost: 4
+  hp: 0
+  damage: 0
+  attackSpeed: 0
+  moveSpeed: 0
+  attackRange: 0
+  targetType: 2
+  isSpell: 1
+  spellRadius: 2
+  spellDamage: 300
+  spellDuration: 0
+  cardArt: {fileID: 0}
+  unitPrefab: {fileID: 0}
