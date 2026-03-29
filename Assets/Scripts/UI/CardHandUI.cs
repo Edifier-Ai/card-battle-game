@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CardHandUI : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class CardHandUI : MonoBehaviour
     [SerializeField] private Transform handContainer;
     [SerializeField] private GameObject cardUIPrefab;
 
-    private List<GameObject> cardUIs = new();
+    private List<GameObject> cardUIs = new List<GameObject>();
     private IReadOnlyList<Card> hand;
     private int selectedCardIndex = -1;
 
@@ -38,10 +37,10 @@ public class CardHandUI : MonoBehaviour
             var cardObj = Instantiate(cardUIPrefab, handContainer);
 
             // Setup card visuals
-            var nameText = cardObj.transform.Find("Name")?.GetComponent<TMP_Text>();
-            var costText = cardObj.transform.Find("Cost")?.GetComponent<TMP_Text>();
+            var nameText = cardObj.transform.Find("Name")?.GetComponent<Text>();
+            var costText = cardObj.transform.Find("Cost")?.GetComponent<Text>();
             var artImage = cardObj.transform.Find("Art")?.GetComponent<Image>();
-            var typeText = cardObj.transform.Find("Type")?.GetComponent<TMP_Text>();
+            var typeText = cardObj.transform.Find("Type")?.GetComponent<Text>();
 
             if (nameText != null) nameText.text = cardData.cardName;
             if (costText != null) costText.text = cardData.elixirCost.ToString();
@@ -77,7 +76,7 @@ public class CardHandUI : MonoBehaviour
     {
         if (selectedCardIndex >= 0 && hand != null)
         {
-            OnCardPlayed?.Invoke(selectedCardIndex, lane);
+            OnCardPlayed(selectedCardIndex, lane);
             selectedCardIndex = -1;
 
             // Clear highlights

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class DeckEditorUI : MonoBehaviour
@@ -11,11 +10,11 @@ public class DeckEditorUI : MonoBehaviour
     [SerializeField] private Transform deckContainer;
     [SerializeField] private GameObject cardUIPrefab;
     [SerializeField] private Button backButton;
-    [SerializeField] private TMP_Text deckCountText;
+    [SerializeField] private Text deckCountText;
     [SerializeField] private int maxDeckSize = 8;
 
     private List<CardData> allCards;
-    private List<CardData> currentDeck = new();
+    private List<CardData> currentDeck = new List<CardData>();
 
     private void Start()
     {
@@ -68,14 +67,14 @@ public class DeckEditorUI : MonoBehaviour
         }
 
         if (deckCountText != null)
-            deckCountText.text = $"Deck: {currentDeck.Count}/{maxDeckSize}";
+            deckCountText.text = string.Format("Deck: {0}/{1}", currentDeck.Count, maxDeckSize);
     }
 
     private void SetupCardUI(GameObject obj, CardData card)
     {
-        var nameText = obj.transform.Find("Name")?.GetComponent<TMP_Text>();
-        var costText = obj.transform.Find("Cost")?.GetComponent<TMP_Text>();
-        var typeText = obj.transform.Find("Type")?.GetComponent<TMP_Text>();
+        var nameText = obj.transform.Find("Name")?.GetComponent<Text>();
+        var costText = obj.transform.Find("Cost")?.GetComponent<Text>();
+        var typeText = obj.transform.Find("Type")?.GetComponent<Text>();
 
         if (nameText != null) nameText.text = card.cardName;
         if (costText != null) costText.text = card.elixirCost.ToString();

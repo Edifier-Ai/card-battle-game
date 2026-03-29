@@ -6,7 +6,7 @@ public enum UnitState { Idle, Moving, Attacking, Dead }
 
 public class Unit : MonoBehaviour
 {
-    [Header("Stats")]
+    // Stats (set via Initialize)
     protected int currentHP;
     protected int maxHP;
     protected int damage;
@@ -14,7 +14,7 @@ public class Unit : MonoBehaviour
     protected float moveSpeed;
     protected float attackRange;
 
-    [Header("State")]
+    // State properties
     public UnitState State { get; protected set; } = UnitState.Idle;
     public bool IsPlayerUnit { get; private set; }
     public int Lane { get; private set; }

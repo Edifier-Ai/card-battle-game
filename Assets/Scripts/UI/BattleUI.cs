@@ -1,20 +1,19 @@
 // Assets/Scripts/UI/BattleUI.cs
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class BattleUI : MonoBehaviour
 {
     [Header("Elixir")]
     [SerializeField] private Slider elixirBar;
-    [SerializeField] private TMP_Text elixirText;
+    [SerializeField] private Text elixirText;
 
     [Header("Timer")]
-    [SerializeField] private TMP_Text timerText;
+    [SerializeField] private Text timerText;
 
     [Header("Results")]
     [SerializeField] private GameObject resultPanel;
-    [SerializeField] private TMP_Text resultText;
+    [SerializeField] private Text resultText;
     [SerializeField] private Button returnButton;
 
     [Header("Card Hand")]
@@ -36,7 +35,8 @@ public class BattleUI : MonoBehaviour
 
         EventBus.Subscribe<BattleEndEvent>(OnBattleEnd);
 
-        resultPanel?.SetActive(false);
+        if (resultPanel != null)
+            resultPanel.SetActive(false);
         if (returnButton != null)
             returnButton.onClick.AddListener(OnReturnClicked);
 
@@ -83,13 +83,13 @@ public class BattleUI : MonoBehaviour
         float remaining = battleManager.GetRemainingTime();
         int minutes = Mathf.FloorToInt(remaining / 60);
         int seconds = Mathf.FloorToInt(remaining % 60);
-        timerText.text = $"{minutes}:{seconds:00}";
+        timerText.text = string.Format("{0}:{1:00}", minutes, seconds);
     }
 
     private void UpdateCardInteractability()
     {
         if (cardHandUI != null)
-            cardHandUI.UpdateCardInteractability(battleManager?.GetCurrentElixir() ?? 0);
+            cardHandUI.UpdateCardInteractability(battleManager != null ? battleManager.GetCurrentElixir() : 0);
     }
 
     private void OnBattleEnd(BattleEndEvent e)
@@ -116,7 +116,8 @@ public class BattleUI : MonoBehaviour
         if (battleManager != null)
         {
             battleManager.PlayCard(cardIndex, lane);
-            cardHandUI?.RenderHand();
+            if (cardHandUI != null)
+                cardHandUI.RenderHand();
         }
     }
 
