@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 24
+  productGUID: a1b2c3d4e5f67890a1b2c3d4e5f67890
+  AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
+  AndroidEnableSustainedPerformanceMode: 0
+  defaultScreenOrientation: 4
+  targetDevice: 2
+  useOnDemandRendering: 0
+  companyName: DefaultCompany
+  productName: CardBattleGame
+  productVersion: 1.0
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.CardBattleGame
+    iOS: com.DefaultCompany.CardBattleGame
+  defaultBundleIdentifier: com.DefaultCompany.CardBattleGame
+  bundleVersion: 1.0
+  androidBundleVersionCode: 1
+  iOSBuildNumber: 1
+  scriptingBackend:
+    Standalone: 0
+    iOS: 1
+  il2cppCompilerConfiguration: 0
+  managedStrippingLevel:
+    iOS: 1
+  allowUnsafeCode: 0
+  useDeterministicCompilation: 1
+  enableRoslynAnalyzers: 1
+  additionalIl2CppArgs:
+  scriptingRuntimeVersion: 1
+  gcIncremental: 0
+  gcEnableWbarrier: 0
+  androidTargetArchitectures: 3
+  targetArchitectures: 1
+  iOSTargetDevice: 1
+  iOSTargetOSVersionString: 12.0
+  iOSRequireARKit: 0
+  metalAPIValidation: 1
+  iOSRenderExtraFrameOnPause: 0
+  iOSHideHomeButton: 0
+  iosAllowHTTP: 0
+  appleEnableAutomaticSigning: 1
+  resolutionDialogSetting: 0
+  fullscreenMode: 1
+  defaultScreenWidth: 1920
+  defaultScreenHeight: 1080
+  runInBackground: 1
+  captureSingleScreen: 0
+  useResizableWindow: 0
+  macAppStoreCategory: public.app-category.games
+  allowFullscreenSwitch: 1
+  graphicsMultisampleLevel: 2
+  vrEnabled: 0
+  scriptingDefineSymbols: []
+  additionalCompilerOptions: []
+  platformArchitecture: []
+  graphicsJobs: []
+  graphicsDeviceTypes:
+    Standalone: 2
+    iOS: 4
+  stripEngineCode: 1
