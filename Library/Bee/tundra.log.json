@@ -602,14 +602,3 @@
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"MovedFromExtractorCombine Library/Bee/artifacts/200b0aE.dag/UnityEditor.Purchasing.dll.mvfrm","enqueuedNodeIndex":485,"enqueueingNodeAnnotation":"Csc Library/Bee/artifacts/200b0aE.dag/UnityEditor.Purchasing.dll (+2 others)","enqueueingNodeIndex":482}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"WriteText Library/Bee/artifacts/200b0aE.dag/UnityEditor.Purchasing.dll.mvfrm.rsp","enqueuedNodeIndex":484,"enqueueingNodeAnnotation":"MovedFromExtractorCombine Library/Bee/artifacts/200b0aE.dag/UnityEditor.Purchasing.dll.mvfrm","enqueueingNodeIndex":485}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"CopyFiles Library/ScriptAssemblies/UnityEditor.Purchasing.pdb","enqueuedNodeIndex":603,"enqueueingNodeAnnotation":"ScriptAssemblies","enqueueingNodeIndex":6}
-{"msg":"nodeRetryBuild","annotation":"Csc Library/Bee/artifacts/200b0aE.dag/GameScripts.dll (+2 others)","index":131}
-{"msg":"runNodeAction","annotation":"Csc Library/Bee/artifacts/200b0aE.dag/GameScripts.dll (+2 others)","displayName":"Csc GameScripts","index":131}
-{"msg":"noderesult","processed_node_count":599,"number_of_nodes_ever_queued":603,"annotation":"Csc Library/Bee/artifacts/200b0aE.dag/GameScripts.dll (+2 others)","index":131,"exitcode":0,"outputfile":"Library/Bee/artifacts/200b0aE.dag/GameScripts.dll"}
-{"msg":"newNode","annotation":"CopyFiles Library/ScriptAssemblies/GameScripts.pdb","index":503}
-{"msg":"runNodeAction","annotation":"CopyFiles Library/ScriptAssemblies/GameScripts.pdb","displayName":"Copying GameScripts.pdb","index":503}
-{"msg":"newNode","annotation":"CopyFiles Library/ScriptAssemblies/GameScripts.dll","index":502}
-{"msg":"runNodeAction","annotation":"CopyFiles Library/ScriptAssemblies/GameScripts.dll","displayName":"Copying GameScripts.dll","index":502}
-{"msg":"noderesult","processed_node_count":600,"number_of_nodes_ever_queued":603,"annotation":"CopyFiles Library/ScriptAssemblies/GameScripts.pdb","index":503,"exitcode":0,"outputfile":"Library/ScriptAssemblies/GameScripts.pdb"}
-{"msg":"noderesult","processed_node_count":601,"number_of_nodes_ever_queued":603,"annotation":"CopyFiles Library/ScriptAssemblies/GameScripts.dll","index":502,"exitcode":0,"outputfile":"Library/ScriptAssemblies/GameScripts.dll"}
-{"msg":"newNode","annotation":"ScriptAssemblies","index":6}
-{"msg":"runNodeAction","annotation":"ScriptAssemblies","index":6}
